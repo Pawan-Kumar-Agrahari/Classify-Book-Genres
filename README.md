@@ -1,12 +1,72 @@
-# Classify-Book-Genres
-The task at hand involves predicting the genre of a book based on its features, such as author popularity, book length, and the number of keywords. This is a multi-class classification problem, where the goal is to categorize books into genres like Fiction, Non-Fiction, Mystery, etc. The process begins by loading the dataset, which contains both the features and the target variable (genre). The features include numerical values like author popularity, book length, and the number of keywords, while the target variable is categorical (genre). To make the target variable compatible with machine learning algorithms, the genre labels are encoded into numeric values using a LabelEncoder.
+Book Genre Classification
+This project uses machine learning to classify books into genres based on features such as author popularity, book length, and the number of keywords. It utilizes a Random Forest Classifier for predicting the genre of a book.
 
-Next, the dataset is split into training and testing sets, with 80% used for training the model and 20% reserved for testing. The Random Forest Classifier, a robust ensemble learning method, is then used to train a model on the training data. This model builds multiple decision trees and aggregates their results to make predictions about book genres. After training, the model is evaluated on the test set by making predictions and comparing them to the true labels.
+Features:
+Author Popularity: Numerical representation of how popular the author is.
 
-To assess the model’s performance, several metrics are calculated, including accuracy, precision, recall, and the F1 score. These metrics provide a comprehensive understanding of how well the model is performing. The confusion matrix is also computed to visually inspect how the model's predictions compare to the actual genres. A heatmap of the confusion matrix is generated to make it easier to interpret the results.
+Book Length: Length of the book, likely measured in pages or word count.
 
-Overall, the code provides a complete solution for classifying books into genres using a Random Forest Classifier. It includes essential steps like data preprocessing, model training, evaluation, and visualization, all aimed at understanding and improving the model's performance. The evaluation metrics and confusion matrix help pinpoint where the model is excelling and where it might need improvement, offering valuable insights into its effectiveness.
+Number of Keywords: Number of keywords associated with the book.
 
+Target Variable (Genre): The genre of the book, which is the class we are predicting (e.g., Fiction, Non-Fiction).
 
+Steps Involved:
+Data Loading:
 
+Load the dataset (book data) from a CSV file.
+
+Data Preprocessing:
+
+Extract features (author_popularity, book_length, num_keywords) and the target variable (genre).
+
+Encode the categorical target variable into numeric values using LabelEncoder.
+
+Train-Test Split:
+
+Split the dataset into training (80%) and testing (20%) sets using train_test_split.
+
+Model Building:
+
+Train a Random Forest Classifier with 100 trees to predict the book genre.
+
+Model Evaluation:
+
+Evaluate the model's performance using metrics such as:
+
+Accuracy
+
+Precision
+
+Recall
+
+F1 Score
+
+Compute the Confusion Matrix to visualize the performance.
+
+Visualization:
+
+Generate a heatmap of the confusion matrix to make it easier to interpret model results.
+
+Libraries Used:
+Pandas: For data manipulation.
+
+Scikit-learn: For machine learning and model evaluation.
+
+Seaborn & Matplotlib: For visualization (confusion matrix heatmap).
+
+How to Run:
+Install the required libraries:
+
+bash
+Copy
+Edit
+pip install pandas scikit-learn seaborn matplotlib
+Download the dataset and save it as book_genres.csv.
+
+Run the script to train the model and evaluate its performance.
+
+Results:
+The model’s performance is evaluated using accuracy, precision, recall, and F1 score.
+
+A confusion matrix heatmap is generated to visually show how well the model predicts different genres.
 

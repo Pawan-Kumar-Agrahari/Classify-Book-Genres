@@ -1,72 +1,48 @@
 Book Genre Classification
-This project uses machine learning to classify books into genres based on features such as author popularity, book length, and the number of keywords. It utilizes a Random Forest Classifier for predicting the genre of a book.
+This project classifies books into genres using a Random Forest Classifier based on features like author popularity, book length, and the number of keywords.
 
 Features:
-Author Popularity: Numerical representation of how popular the author is.
+Author Popularity: Numerical representation of author popularity.
 
-Book Length: Length of the book, likely measured in pages or word count.
+Book Length: Length of the book (pages or word count).
 
 Number of Keywords: Number of keywords associated with the book.
 
-Target Variable (Genre): The genre of the book, which is the class we are predicting (e.g., Fiction, Non-Fiction).
+Genre: The target genre we want to predict (e.g., Fiction, Non-Fiction).
 
-Steps Involved:
-Data Loading:
+Steps:
+Data Loading: Load dataset from CSV.
 
-Load the dataset (book data) from a CSV file.
+Preprocessing: Encode the target genre using LabelEncoder.
 
-Data Preprocessing:
+Train-Test Split: Split the data into 80% training and 20% testing.
 
-Extract features (author_popularity, book_length, num_keywords) and the target variable (genre).
+Model Building: Train a Random Forest Classifier on the training data.
 
-Encode the categorical target variable into numeric values using LabelEncoder.
+Evaluation: Calculate Accuracy, Precision, Recall, and F1 Score. Generate a Confusion Matrix.
 
-Train-Test Split:
+Visualization: Plot a heatmap of the confusion matrix.
 
-Split the dataset into training (80%) and testing (20%) sets using train_test_split.
+Libraries:
+Pandas: Data handling.
 
-Model Building:
+Scikit-learn: Machine learning.
 
-Train a Random Forest Classifier with 100 trees to predict the book genre.
-
-Model Evaluation:
-
-Evaluate the model's performance using metrics such as:
-
-Accuracy
-
-Precision
-
-Recall
-
-F1 Score
-
-Compute the Confusion Matrix to visualize the performance.
-
-Visualization:
-
-Generate a heatmap of the confusion matrix to make it easier to interpret model results.
-
-Libraries Used:
-Pandas: For data manipulation.
-
-Scikit-learn: For machine learning and model evaluation.
-
-Seaborn & Matplotlib: For visualization (confusion matrix heatmap).
+Seaborn & Matplotlib: Visualization.
 
 How to Run:
-Install the required libraries:
+Install required libraries:
 
 bash
 Copy
 Edit
 pip install pandas scikit-learn seaborn matplotlib
-Download the dataset and save it as book_genres.csv.
+Download the dataset as book_genres.csv.
 
-Run the script to train the model and evaluate its performance.
+Run the Python script to train and evaluate the model.
 
 Results:
-The model’s performance is evaluated using accuracy, precision, recall, and F1 score.
+The model's performance is evaluated with accuracy, precision, recall, and F1 score.
 
-A confusion matrix heatmap is generated to visually show how well the model predicts different genres.
+A confusion matrix heatmap is displayed for visual evaluation.
 
